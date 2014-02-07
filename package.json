@@ -11,7 +11,7 @@
   ],
   "homepage": "http://theoutlands.me",
   "author": {
-    "name": "Ze Fontainhas",
+    "name": "Zé Fontainhas",
     "email": "jfontainhas@gmail.com",
     "url": "http://github.com/zedejose"
   },
@@ -23,7 +23,7 @@
     "type": "GPL V2",
     "url": "https://github.com/zedejose/the-outlands-theme/blob/master/LICENSE"
   },
-    "devDependencies": {
+  "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-concat": "~0.1.2",
     "grunt-contrib-uglify": "~0.1.1",
@@ -31,7 +31,6 @@
     "grunt-contrib-cssmin": "~0.6.0",
     "grunt-contrib-jshint": "~0.1.1",
     "grunt-contrib-nodeunit": "~0.1.2",
-    "grunt-contrib-watch": "~0.2.0",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-copy": "~0.4.1",
     "grunt-contrib-compress": "~0.5.2",
