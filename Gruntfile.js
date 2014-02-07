@@ -41,25 +41,37 @@ module.exports = function(grunt) {
             }
         },
 
+        // Create readme.txt
+        wp_readme_to_markdown: {
+            development: {
+                files: {
+                  'README.md': 'readme.txt'
+                },
+            },
+        },
+
         // Watch settings
         watch: {
-          css: {
-            files: ['css/less/*.less'],
-            tasks: ['less:style', 'cssmin'],
-            options: {
-              livereload: true,
+            css: {
+                files: ['css/less/*.less'],
+                tasks: ['less:style', 'cssmin'],
+            readme: {
+                files: ['readme.txt'],
+                tasks: ['wp_readme_to_markdown:development'],
             }
           }
         }
-        });
+
+    });
 
     // 3. Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-wp-readme-to-markdown');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['less', 'cssmin']);
+    grunt.registerTask('default', ['less', 'cssmin', 'wp_readme_to_markdown']);
 
 };
