@@ -1,6 +1,8 @@
-/*! The Outlands WordPress Theme - v0.1.0
+/* The Outlands WordPress Theme - v0.1.0
  * http://theoutlands.me
  * Copyright (c) 2014, Zé Fontainhas
- * Licensed GPLv2+ */
+ * Licensed GPLv2+ * 
+ * Do not modify this file directly, use the matching LESS file instead
+ */
 
 body{font-size:100%;color:#00f;font-family:Times}

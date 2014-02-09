@@ -23,10 +23,12 @@ module.exports = function(grunt) {
         // Minify CSS
         cssmin: {
             options: {
-                banner: '/*! <%= pkg.title %> - v<%= pkg.version %>\n' +
+                banner: '/* <%= pkg.title %> - v<%= pkg.version %>\n' +
                     ' * <%= pkg.homepage %>\n' +
                     ' * Copyright (c) <%= grunt.template.today("yyyy") %>, <%= pkg.author.name %>\n' +
                     ' * Licensed GPLv2+' +
+                    ' * \n' +
+                    ' * Do not modify this file directly, use the matching LESS file instead\n' +
                     ' */\n'
             },
 
