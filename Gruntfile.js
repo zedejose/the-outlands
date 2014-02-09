@@ -52,6 +52,20 @@ module.exports = function(grunt) {
             },
         },
 
+        // Makepot
+        makepot: {
+            development: {
+                options: {
+                    cwd: '',           // Directory of files to internationalize.
+                    domainPath: '/languages',    // Where to save the POT file.
+                    i18nToolsPath: '/Users/ze/Projects/Repos/i18n\ tools/', // Path to the i18n tools directory.
+                    mainFile: 'style.css',      // Main project file.
+                    potFilename: 'the-outlands.pot',   // Name of the POT file.
+                    type: 'wp-theme'  // Type of project (wp-plugin or wp-theme).
+                }
+            }
+        },
+
         // Watch settings
         watch: {
             css: {
@@ -72,8 +86,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-wp-readme-to-markdown');
+    grunt.loadNpmTasks('grunt-wp-i18n');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['less', 'cssmin', 'wp_readme_to_markdown']);
+    grunt.registerTask('default', ['less', 'cssmin', 'wp_readme_to_markdown', 'makepot']);
 
 };
